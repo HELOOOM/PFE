@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - Gestion des Déchets JEANROL</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
 </head>
 <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="logo">JEANROL</div>
+        <ul class="nav-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/register" class="active">S'inscrire</a></li>
+            <li><a href="/login">Se connecter</a></li>
+            <li><a href="/dashboard">Tableau de bord</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section / Banner -->
+    <header class="hero">
+        <h1>Rejoignez notre plateforme de gestion des déchets</h1>
+        <p>Optimisez vos processus de tri et de recyclage avec nous.</p>
+    </header>
+
+    <!-- Main Container -->
     <div class="container">
         <header>
-            <h1>Inscription</h1>
+            <h2>Inscription</h2>
             <p>Rejoignez-nous pour optimiser vos processus de tri et de recyclage.</p>
         </header>
         <form method="POST">

@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier le Nom d'Utilisateur</title>
+    <title>Modifier le Nom d'Utilisateur - Gestion des Déchets JEANROL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style6.css') }}">
 </head>
 <body>
-    <h2>Modifier le Nom d'Utilisateur</h2>
-    <form method="POST">
-        <!-- Champ caché contenant l'ID utilisateur -->
-        <input type="hidden" name="user_id" value="{{ session['user_id'] }}">
 
-        <label >Nouveau Nom d'Utilisateur :</label>
-        <input type="text" name="new_username" required><br><br>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="logo">JEANROL</div>
+        <ul class="nav-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/dashboard">Tableau de bord</a></li>
+            <li><a href="/edit_username" class="active">Modifier le nom</a></li>
+            <li><a href="/logout">Se déconnecter</a></li>
+        </ul>
+    </nav>
 
-        <button type="submit">Modifier</button>
-    </form>
+    <!-- Form Section -->
+    <div class="container">
+        <h1>Modifier le Nom d'Utilisateur</h1>
+        <p>Entrez un nouveau nom d'utilisateur pour mettre à jour votre compte.</p>
+
+        <form method="POST">
+            <!-- Champ caché contenant l'ID utilisateur -->
+            <input type="hidden" name="user_id" value="{{ session['user_id'] }}">
+
+            <label for="new_username">Nouveau Nom d'Utilisateur :</label>
+            <input type="text" id="new_username" name="new_username" required>
+
+            <button type="submit" class="button">Modifier</button>
+        </form>
+    </div>
+
 </body>
 </html>

@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Gestion des Déchets JEANROL</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bienvenue sur l'application de gestion des déchets <span class="highlight">JEANROL</span></h1>
-            <p>Optimisez vos processus de tri et de recyclage avec notre outil intelligent.</p>
-        </header>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="logo">JEANROL</div>
         <nav>
             <ul>
-                <li><a href="/register" class="button">S'inscrire</a></li>
-                <li><a href="/login" class="button">Se connecter</a></li>
-                <li><a href="/dashboard" class="button">Tableau de bord</a></li>
+                <li><a href="/register">S'inscrire</a></li>
+                <li><a href="/login">Se connecter</a></li>
+                <li><a href="/dashboard">Tableau de bord</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
-        <footer>
-            <p>&copy; 2023 JEANROL. Tous droits réservés.</p>
-        </footer>
-    </div>
+    </header>
+
+    <!-- Image Slideshow -->
+    <section class="slideshow">
+        <div class="slides">
+            <img src="{{ url_for('static', filename='img1.jpg') }}" class="slide active">
+            <img src="{{ url_for('static', filename='img2.jpg') }}" class="slide">
+            <img src="{{ url_for('static', filename='img3.jpg') }}" class="slide">
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h1>Bienvenue sur <span class="highlight">JEANROL</span></h1>
+        <p>Optimisez vos processus de tri et de recyclage avec notre outil intelligent.</p>
+        <a href="/register" class="button">Commencer</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 JEANROL. Tous droits réservés.</p>
+    </footer>
+
 </body>
 </html>

@@ -2,21 +2,42 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Ajouter des Données</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter des Données - Gestion des Déchets JEANROL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style5.css') }}">
 </head>
 <body>
-    <h1>Ajouter des Données des Capteurs</h1>
-    <form method="POST">
-        <label for="material_type">Type de Matériau :</label>
-        <input type="text" id="material_type" name="material_type" required><br>
 
-        <label for="volume_processed">Volume Traité (tonnes) :</label>
-        <input type="number" id="volume_processed" name="volume_processed" step="0.1" required><br>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="logo">JEANROL</div>
+        <ul class="nav-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/dashboard">Tableau de bord</a></li>
+            <li><a href="/add_sensor_data" class="active">Ajouter des données</a></li>
+            <li><a href="/generate_report">Générer un rapport</a></li>
+            <li><a href="/logout">Se déconnecter</a></li>
+        </ul>
+    </nav>
 
-        <label for="loss_rate">Taux de Perte (%) :</label>
-        <input type="number" id="loss_rate" name="loss_rate" step="0.1" required><br>
+    <!-- Form Section -->
+    <div class="container">
+        <h1>Ajouter des Données des Capteurs</h1>
+        <p>Remplissez les informations ci-dessous pour enregistrer de nouvelles données.</p>
 
-        <button type="submit">Ajouter</button>
-    </form>
+        <form method="POST">
+            <label for="material_type">Type de Matériau :</label>
+            <input type="text" id="material_type" name="material_type" required>
+
+            <label for="volume_processed">Volume Traité (tonnes) :</label>
+            <input type="number" id="volume_processed" name="volume_processed" step="0.1" required>
+
+            <label for="loss_rate">Taux de Perte (%) :</label>
+            <input type="number" id="loss_rate" name="loss_rate" step="0.1" required>
+
+            <button type="submit" class="button">Ajouter</button>
+        </form>
+    </div>
+
 </body>
 </html>
