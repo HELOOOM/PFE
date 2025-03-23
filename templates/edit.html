@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier le Nom d'Utilisateur</title>
+</head>
+<body>
+    <h2>Modifier le Nom d'Utilisateur</h2>
+    <form method="POST">
+        <!-- Champ caché contenant l'ID utilisateur -->
+        <input type="hidden" name="user_id" value="{{ session['user_id'] }}">
+
+        <label >Nouveau Nom d'Utilisateur :</label>
+        <input type="text" name="new_username" required><br><br>
+
+        <button type="submit">Modifier</button>
+    </form>
+</body>
+</html>

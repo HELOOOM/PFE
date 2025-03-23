@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Gestion des Déchets JEANROL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bienvenue sur l'application de gestion des déchets <span class="highlight">JEANROL</span></h1>
+            <p>Optimisez vos processus de tri et de recyclage avec notre outil intelligent.</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/register" class="button">S'inscrire</a></li>
+                <li><a href="/login" class="button">Se connecter</a></li>
+                <li><a href="/dashboard" class="button">Tableau de bord</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <p>&copy; 2023 JEANROL. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

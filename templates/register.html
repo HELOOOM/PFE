@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Gestion des Déchets JEANROL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Inscription</h1>
+            <p>Rejoignez-nous pour optimiser vos processus de tri et de recyclage.</p>
+        </header>
+        <form method="POST">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="preferred_language">Langue préférée :</label>
+            <select id="preferred_language" name="preferred_language">
+                <option value="fr">Français</option>
+                <option value="en">Anglais</option>
+            </select>
+
+            <label for="report_format">Format des rapports :</label>
+            <select id="report_format" name="report_format">
+                <option value="PDF">PDF</option>
+                <option value="CSV">CSV</option>
+            </select>
+
+            <button type="submit" class="button">S'inscrire</button>
+        </form>
+        <footer>
+            <p>Déjà inscrit ? <a href="/login">Connectez-vous ici</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>

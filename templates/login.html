@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Gestion des Déchets JEANROL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Connexion</h1>
+            <p>Accédez à votre tableau de bord pour gérer vos données de tri et de recyclage.</p>
+        </header>
+        <form method="POST">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="button">Se connecter</button>
+        </form>
+        <footer>
+            <p>Pas encore inscrit ? <a href="/register">Inscrivez-vous ici</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>

