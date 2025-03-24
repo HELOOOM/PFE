@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gestion des Déchets JEANROL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style7.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <header>
+        <div class="logo">JEANROL</div>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/dashboard">Tableau de bord</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+                <li><a href="/login">Se connecter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        <h1>Contactez-nous</h1>
+        <p>Une question ? Un partenariat ? Contactez-nous via le formulaire ci-dessous.</p>
+
+        <div class="contact-content">
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="button">Envoyer</button>
+            </form>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Nos coordonnées</h3>
+                <p><strong>Email :</strong> contact@jeanrol.com</p>
+                <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                <p><strong>Adresse :</strong> 12 Rue du Recyclage, 75001 Paris, France</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 JEANROL. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

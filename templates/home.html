@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Gestion des Déchets JEANROL</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
 <body>
 
@@ -22,13 +21,9 @@
         </nav>
     </header>
 
-    <!-- Image Slideshow -->
-    <section class="slideshow">
-        <div class="slides">
-            <img src="{{ url_for('static', filename='img1.jpg') }}" class="slide active">
-            <img src="{{ url_for('static', filename='img2.jpg') }}" class="slide">
-            <img src="{{ url_for('static', filename='img3.jpg') }}" class="slide">
-        </div>
+    <!-- Static Image Section -->
+    <section class="hero">
+        <img src="{{ url_for('static', filename='img1.jpg') }}" alt="Image d'accueil">
     </section>
 
     <!-- Welcome Section -->

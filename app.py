@@ -123,6 +123,32 @@ def edit_username():
 
     return render_template('edit.html')
 
+#code contact
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        # Récupérer les données du formulaire
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+
+        # Vous pouvez envoyer un e-mail ou enregistrer les informations dans la base de données
+        # Exemple d'envoi d'e-mail (vous devez configurer un serveur SMTP, par exemple avec Flask-Mail)
+        try:
+            send_email(
+                subject="Nouveau message de contact",
+                recipient="contact@jeanrol.com",
+                body=f"Nom: {name}\nEmail: {email}\n\nMessage: {message}"
+            )
+            flash('Votre message a été envoyé avec succès !', 'success')
+        except Exception as e:
+            flash('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.', 'error')
+
+        return redirect(url_for('contact'))
+
+    return render_template('contact.html')
+
+
 #oscommandinjectio
 @app.route('/ping', methods=['GET', 'POST'])
 def ping():
